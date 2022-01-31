@@ -1,0 +1,60 @@
+<!--Header-->
+
+<nav class="navbar navbar-expand-lg bg navbar-dark navbar-static-top">   <!--#to color navbar add bg and for dark add dark after navbar-->
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/#">My Imagebazaar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" id="navrbarhome" href="/#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">     <!--style="color: #ffffff;" #ffffff=white color-->
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false" style="color: #ffffff;">
+            Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a href="/#" class="list-group-item" href="/#" style="width:100%">All Images</a></li>
+
+            {%for c in cats%}
+          <a href="/categorys/{{c.pk}}" class="list-group-item list-group-item-action" >{{c.title}}</a>
+           {% endfor%}
+
+<!--            <li><a class="dropdown-item" href="#">Bhakti wallpaper</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Game</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Cricket</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Bollywood</a></li>-->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--##ff800a => orange-->
+
+<!--.list-group-item{                       #category k liye hai-->
+<!--      background:#9c27b0!important;-->
+<!--      border-color:#FF7F50; }            #FF7F50 => Coral-->
+
+
+<!--#navbarDropdownMenuLink:hover{-->
+<!--      transform: scale(1.05);-->
+<!--      color: #ffffff; }      ##ffffff => white-->
+
+<!--.dropdown:hover>.dropdown-menu{-->
+<!--      display:block; } #hover hote hi dropdown hoga-->
+
+<!--#navbarDropdownMenuLink:hover{-->
+<!--      background-color:#9c27b0!important;-->
+<!--      transition:0.1s;-->
+<!--      transform: scale(1.05);-->
+<!--      color: #ffffff;-->
+<!--      text-shadow:10px;-->
+<!--      }-->
+
